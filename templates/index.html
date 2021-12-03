@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=01.0" />
+    <title>Activity Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <div class="container main">
+      <header>Human Activity Prediction From Sensor Data</header>
+      <form action="/" method="post" id="form">
+        <div class="avg_rss12 form-feild">
+          <label for="avg_rss12">Avarage of RSS12 Value</label>
+          <input
+            id="avg_rss12"
+            name="avg_rss12"
+            type="number"
+            step="0.01"
+            placeholder="Enter Avarage of RSS12"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <div class="var_rss12 form-feild">
+          <label for="var_rss12">Variance of RSS12 Value</label>
+          <input
+            id="var_rss12"
+            name="var_rss12"
+            type="number"
+            step="0.01"
+            placeholder="Enter Variance of RSS12"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <div class="avg_rss13 form-feild">
+          <label for="avg_rss13">Avarage of RSS13 Value</label>
+          <input
+            id="avg_rss13"
+            name="avg_rss13"
+            type="number"
+            step="0.01"
+            placeholder="Enter Avarage of RSS13"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <div class="var_rss13 form-feild">
+          <label for="var_rss13">Variance of RSS13 Value</label>
+          <input
+            id="var_rss13"
+            name="var_rss13"
+            type="number"
+            step="0.01"
+            placeholder="Enter Variance of RSS13"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <div class="avg_rss23 form-feild">
+          <label for="avg_rss23">Avarage of RSS23 Value</label>
+          <input
+            id="avg_rss23"
+            name="avg_rss23"
+            type="number"
+            step="0.01"
+            placeholder="Enter Avarage of RSS23"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <div class="var_rss23 form-feild">
+          <label for="var_rss23">Variance of RSS23 Value</label>
+          <input
+            id="var_rss23"
+            name="var_rss23"
+            type="number"
+            step="0.01"
+            placeholder="Enter Variance of RSS23"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="error">
+            <small class="message" id="message">Error message</small>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Predict</button>
+      </form>
+    </div>
+
+    <script src="static/script.js"></script>
+  </body>
+</html>
