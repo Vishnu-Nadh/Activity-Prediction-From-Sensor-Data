@@ -74,3 +74,9 @@ class Preprocessor:
         X_s = self.standerdScaling(X_g)
         X_o = self.removeOutliers(X_s, X_s.columns)
         return X_o, Y
+
+    def preprocessPred(self):
+        data = self.guassianTransformation(self.data)
+        scaler = pickle.load(open("Scaler/std_scaler.sav", "rb"))
+        data_p = pd.DataFrame(scaler.transform(data), columns=data.columns)
+        return data_p
