@@ -1,5 +1,7 @@
 from flask import Flask, json, request, jsonify, render_template, url_for
 import os
+from createDataset import Create_Dataset
+from preprocessing import Preprocessor
 
 app = Flask(__name__)
 img_path = os.path.join("static", "images")
@@ -8,9 +10,19 @@ app.config["UPLOAD_FOLDER"] = img_path
 
 @app.route("/train", methods=["GET", "POST"])
 def train():
-    return render_template("index.html")
+    if request.method == 'POST':
+        if request.json['key'] == 'start':
+            create_data = Create_Dataset('RawData')
+            data = create_data.getAllData()
+            preprocess = Preprocessor(data)
+            X, Y = preprocess.Preprocess()
+            print(X)
+            
+        return jsonify("training completed")
 
-
+    else:
+        return "post request expected !"
+    
 @app.route("/", methods=["GET", "POST"])
 def predict():
     if request.method == "POST":
